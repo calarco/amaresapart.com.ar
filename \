@@ -1,0 +1,51 @@
+import type { ReactNode } from "react";
+import {
+	Meta,
+	Links,
+	NavLink,
+	ScrollRestoration,
+	Scripts,
+	LiveReload,
+} from "@remix-run/react";
+
+import logo from "~/img/logo.svg";
+import whatsapp from "~/img/whatsapp.svg";
+
+export default function Html({ children }: { children: ReactNode }) {
+	return (
+		<html lang="es">
+			<head>
+				<Meta />
+				<Links />
+			</head>
+			<body className="bg-primary bg-[url('/bg.jpg')] h-screen w-screen overflow-clip select-none text-gray-100/80 font-sans">
+				<nav className="w-full px-12 grid justify-between grid-flow-col">
+					<img src={logo} alt="Logo" className="max-h-60 p-12" />
+					<div className="p-12 grid items-center grid-flow-col gap-8">
+						<NavLink to="/" className="button">
+							Inicio
+						</NavLink>
+						<NavLink to="propuesta" className="button">
+							Santa Clara del Mar
+						</NavLink>
+						<NavLink to="contacto" className="button">
+							Contacto
+						</NavLink>
+						<a
+							href="https://api.whatsapp.com/send?phone=5492233471147"
+							target="_blank"
+							rel="noreferrer"
+							className="button bg-secondary"
+						>
+							<img src={whatsapp} alt="logo" />
+						</a>
+					</div>
+				</nav>
+				<main className="relative text-center">{children}</main>
+				<ScrollRestoration />
+				<Scripts />
+				<LiveReload />
+			</body>
+		</html>
+	);
+}

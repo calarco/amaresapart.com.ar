@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    font-variation-settings: "wght" 400;
+    font-display: swap;
+    src: url("/Raleway-Variable.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Source";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/SourceSansPro-Regular.ttf") format("truetype");
+}
+
+@layer base {
+    select {
+        @apply px-4 py-2 w-full rounded-md bg-transparent bg-slate-100 shadow-inner font-normal appearance-none transition hover:cursor-pointer hover:bg-sky-700/20 focus:bg-orange-400/20 focus:outline-none;
+    }
+    input, textarea {
+        @apply px-5 py-3 w-full rounded-md bg-transparent bg-slate-500/10 shadow-inner md:text-lg font-normal appearance-none transition border border-solid border-transparent hover:border-b-secondary focus:border-secondary focus:outline-none;
+    }    
+}
+
+@layer components {
+	.button {
+		@apply p-4 md:px-6 md:py-4 border border-solid border-transparent text-secondary hover:text-secondary-variant font-normal text-sm md:text-base uppercase text-center transition hover:cursor-pointer active:duration-300 disabled:pointer-events-none;
+	}
+}
+
+@layer utilities {
+	.separator {
+		@apply relative after:content-[""] after:absolute after:-left-px after:top-[calc(50%-0.75rem)] after:h-[1.5rem] after:border-l after:border-solid after:border-gray-200 dark:after:border-gray-700;
+	}
+}
