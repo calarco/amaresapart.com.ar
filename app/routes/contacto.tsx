@@ -44,7 +44,7 @@ export const action: ActionFunction = async ({ request }) => {
         secure: true, // true for 465, false for other ports
         auth: {
             user: "apikey",
-            pass: "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",
+            pass: process.env.API_KEY,
         },
     });
     try {

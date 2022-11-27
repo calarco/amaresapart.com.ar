@@ -735,16 +735,16 @@ input:focus,  textarea:focus {
   left: 2rem;
 }
 
-.bottom-60 {
-  bottom: 15rem;
+.bottom-52 {
+  bottom: 13rem;
 }
 
 .left-4 {
   left: 1rem;
 }
 
-.top-72 {
-  top: 18rem;
+.top-80 {
+  top: 20rem;
 }
 
 .right-4 {
@@ -825,14 +825,6 @@ input:focus,  textarea:focus {
 
 .top-8 {
   top: 2rem;
-}
-
-.top-80 {
-  top: 20rem;
-}
-
-.bottom-52 {
-  bottom: 13rem;
 }
 
 .z-50 {
