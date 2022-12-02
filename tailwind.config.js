@@ -5,6 +5,7 @@ module.exports = {
         fontFamily: {
             raleway: ['Raleway', 'sans-serif'],
             source: ['Source', 'serif'],
+            momcake: ['Momcake', 'serif'],
         },
         extend: {
             colors: {

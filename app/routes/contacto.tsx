@@ -72,14 +72,16 @@ export default function Index() {
     const actionData = useActionData<ActionData>();
 
     return (
-        <section className="absolute inset-0 overflow-clip grid md:grid-flow-col">
-            <img
-                src={map}
-                alt=""
-                className="h-screen w-auto absolute -left-48 hidden md:block"
-            />
-            <div className="md:absolute overflow-auto right-0 md:w-1/2 h-screen p-4 md:p-0 md:pr-24 md:pt-36 grid content-center justify-items-center gap-8 md:gap-16">
-                <p className="w-full text-center md:text-lg">
+        <section className="absolute inset-0 overflow-clip grid lg:grid-flow-col">
+            <div className="hidden absolute overflow-clip top-0 bottom-0 left-0 right-1/2 lg:grid place-items-center">
+                <img
+                    src={map}
+                    alt=""
+                    className="h-full w-auto absolute right-6 xl:right-24 max-w-none"
+                />
+            </div>
+            <div className="overflow-auto lg:absolute right-0 left-1/2 top-0 bottom-0 px-6 py-32 md:p-12 lg:p-0 lg:pt-24 lg:pb-12 lg:pr-12 xl:pr-24 grid content-center justify-items-center gap-8 lg:gap-16">
+                <p className="w-full text-center text-sm md:text-base xl:text-lg">
                     Ubicado frente a la primera línea de playa.
                     <br />
                     Av. Costanera 278. Muelle 1 Parador Cabo Frio. Santa Clara
@@ -87,9 +89,9 @@ export default function Index() {
                 </p>
                 <Form
                     method="post"
-                    className="relative w-full rounded-lg bg-[#d7d7d7] shadow-lg text-gray-900 text-left grid md:grid-cols-2"
+                    className="relative w-full p-6 lg:px-8 lg:py-6 rounded-lg bg-[#d7d7d7] shadow-lg text-gray-900 text-left grid gap-6 lg:gap-8 md:grid-cols-2"
                 >
-                    <label className="px-6 py-4 grid gap-4 font-light">
+                    <label className="grid gap-4 font-light text-sm xl:text-base">
                         Nombre
                         <input
                             type="text"
@@ -99,7 +101,7 @@ export default function Index() {
                             required
                         />
                     </label>
-                    <label className="px-6 py-4 grid gap-4 font-light">
+                    <label className="grid gap-4 font-light text-sm xl:text-base">
                         Email
                         <input
                             type="email"
@@ -109,7 +111,7 @@ export default function Index() {
                             required
                         />
                     </label>
-                    <label className="md:col-span-2 px-6 py-4 grid gap-4 font-light">
+                    <label className="md:col-span-2 grid gap-4 font-light text-sm xl:text-base">
                         Consulta
                         <textarea
                             name="consulta"
@@ -117,15 +119,17 @@ export default function Index() {
                             defaultValue={actionData?.fields?.consulta}
                             autoComplete="off"
                             required
-                            rows={4}
+                            rows={6}
                         />
                     </label>
-                    <button
-                        type="submit"
-                        className="button absolute right-12 -bottom-8 z-50 bg-secondary rounded-md shadow-lg text-primary"
-                    >
-                        Enviar
-                    </button>
+                    <div className="absolute left-0 right-0 -bottom-8 z-30 grid justify-center">
+                        <button
+                            type="submit"
+                            className="button h-16 px-12 bg-secondary rounded-full shadow-lg text-primary"
+                        >
+                            Enviar
+                        </button>
+                    </div>
                     {actionData?.success && (
                         <div className="absolute inset-0 z-40 rounded-md bg-primary/40 backdrop-blur text-gray-100/80 grid items-center text-center text-xl font-bold">
                             Consulta enviada

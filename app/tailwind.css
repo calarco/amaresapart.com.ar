@@ -707,108 +707,88 @@ input:focus,  textarea:focus {
   left: 0px;
 }
 
-.-left-48 {
-  left: -12rem;
-}
-
-.right-0 {
-  right: 0px;
-}
-
-.right-12 {
-  right: 3rem;
-}
-
-.-bottom-8 {
-  bottom: -2rem;
-}
-
 .top-0 {
   top: 0px;
-}
-
-.top-12 {
-  top: 3rem;
-}
-
-.left-8 {
-  left: 2rem;
-}
-
-.bottom-52 {
-  bottom: 13rem;
-}
-
-.left-4 {
-  left: 1rem;
-}
-
-.top-80 {
-  top: 20rem;
-}
-
-.right-4 {
-  right: 1rem;
-}
-
-.bottom-32 {
-  bottom: 8rem;
 }
 
 .bottom-0 {
   bottom: 0px;
 }
 
-.bottom-\[20vh\] {
-  bottom: 20vh;
+.left-0 {
+  left: 0px;
 }
 
-.top-\[35vh\] {
-  top: 35vh;
+.right-1\/2 {
+  right: 50%;
+}
+
+.right-6 {
+  right: 1.5rem;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.left-1\/2 {
+  left: 50%;
+}
+
+.-bottom-8 {
+  bottom: -2rem;
+}
+
+.top-44 {
+  top: 11rem;
+}
+
+.top-1\/3 {
+  top: 33.333333%;
+}
+
+.top-24 {
+  top: 6rem;
+}
+
+.top-1\/2 {
+  top: 50%;
 }
 
 .top-32 {
   top: 8rem;
 }
 
-.left-24 {
-  left: 6rem;
+.bottom-32 {
+  bottom: 8rem;
 }
 
-.left-\[34vw\] {
-  left: 34vw;
+.right-12 {
+  right: 3rem;
 }
 
-.right-\[24vw\] {
-  right: 24vw;
+.bottom-\[15vh\] {
+  bottom: 15vh;
 }
 
-.right-24 {
-  right: 6rem;
+.left-8 {
+  left: 2rem;
 }
 
-.top-40 {
-  top: 10rem;
+.bottom-24 {
+  bottom: 6rem;
 }
 
-.top-1\/4 {
-  top: 25%;
+.right-8 {
+  right: 2rem;
 }
 
-.top-2\/3 {
-  top: 66.666667%;
-}
-
-.bottom-12 {
-  bottom: 3rem;
+.top-12 {
+  top: 3rem;
 }
 
 .top-4 {
   top: 1rem;
-}
-
-.left-0 {
-  left: 0px;
 }
 
 .left-1\/3 {
@@ -827,24 +807,44 @@ input:focus,  textarea:focus {
   top: 2rem;
 }
 
-.z-50 {
-  z-index: 50;
+.right-4 {
+  right: 1rem;
+}
+
+.top-2\/3 {
+  top: 66.666667%;
+}
+
+.top-3\/4 {
+  top: 75%;
+}
+
+.top-1\/4 {
+  top: 25%;
+}
+
+.bottom-1\/3 {
+  bottom: 33.333333%;
+}
+
+.bottom-1\/4 {
+  bottom: 25%;
+}
+
+.z-30 {
+  z-index: 30;
 }
 
 .z-40 {
   z-index: 40;
 }
 
-.z-0 {
-  z-index: 0;
-}
-
 .z-10 {
   z-index: 10;
 }
 
-.z-20 {
-  z-index: 20;
+.z-50 {
+  z-index: 50;
 }
 
 .grid {
@@ -863,24 +863,24 @@ input:focus,  textarea:focus {
   aspect-ratio: 1 / 1;
 }
 
-.aspect-\[4\/3\] {
-  aspect-ratio: 4/3;
-}
-
-.h-screen {
-  height: 100vh;
-}
-
-.h-80 {
-  height: 20rem;
-}
-
 .h-full {
   height: 100%;
 }
 
 .h-16 {
   height: 4rem;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.max-h-\[15vh\] {
+  max-height: 15vh;
+}
+
+.max-h-28 {
+  max-height: 7rem;
 }
 
 .w-auto {
@@ -895,20 +895,20 @@ input:focus,  textarea:focus {
   width: 100vw;
 }
 
-.w-\[300vw\] {
-  width: 300vw;
-}
-
 .w-1\/3 {
   width: 33.333333%;
+}
+
+.max-w-none {
+  max-width: none;
 }
 
 .max-w-2xl {
   max-width: 42rem;
 }
 
-.max-w-\[80vw\] {
-  max-width: 80vw;
+.max-w-xl {
+  max-width: 36rem;
 }
 
 .max-w-\[50vw\] {
@@ -917,31 +917,6 @@ input:focus,  textarea:focus {
 
 .max-w-\[25vw\] {
   max-width: 25vw;
-}
-
-.max-w-\[20vw\] {
-  max-width: 20vw;
-}
-
-.max-w-\[14vw\] {
-  max-width: 14vw;
-}
-
-.max-w-\[26vw\] {
-  max-width: 26vw;
-}
-
-.max-w-xl {
-  max-width: 36rem;
-}
-
-.max-w-\[16rem\] {
-  max-width: 16rem;
-}
-
-.translate-y-20 {
-  --tw-translate-y: 5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .-translate-y-4 {
@@ -964,9 +939,9 @@ input:focus,  textarea:focus {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.scale-100 {
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
+.scale-105 {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -984,12 +959,20 @@ input:focus,  textarea:focus {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.grid-cols-1 {
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+.grid-rows-\[auto\2c 1fr\] {
+  grid-template-rows: auto 1fr;
+}
+
+.place-items-center {
+  place-items: center;
 }
 
 .content-center {
@@ -1020,6 +1003,10 @@ input:focus,  textarea:focus {
   gap: 2rem;
 }
 
+.gap-6 {
+  gap: 1.5rem;
+}
+
 .gap-4 {
   gap: 1rem;
 }
@@ -1028,20 +1015,24 @@ input:focus,  textarea:focus {
   gap: 6rem;
 }
 
+.gap-20 {
+  gap: 5rem;
+}
+
 .gap-28 {
   gap: 7rem;
 }
 
-.gap-6 {
-  gap: 1.5rem;
-}
-
-.self-end {
-  align-self: flex-end;
+.justify-self-start {
+  justify-self: start;
 }
 
 .justify-self-end {
   justify-self: end;
+}
+
+.justify-self-center {
+  justify-self: center;
 }
 
 .overflow-auto {
@@ -1060,12 +1051,12 @@ input:focus,  textarea:focus {
   border-radius: 0.5rem;
 }
 
-.rounded-md {
-  border-radius: 0.375rem;
-}
-
 .rounded-full {
   border-radius: 9999px;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
 }
 
 .border-primary-variant\/20 {
@@ -1103,8 +1094,8 @@ input:focus,  textarea:focus {
   background-attachment: fixed;
 }
 
-.p-4 {
-  padding: 1rem;
+.p-6 {
+  padding: 1.5rem;
 }
 
 .p-12 {
@@ -1115,14 +1106,22 @@ input:focus,  textarea:focus {
   padding: 0.5rem;
 }
 
+.p-8 {
+  padding: 2rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+.py-32 {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
 
 .px-12 {
@@ -1130,9 +1129,9 @@ input:focus,  textarea:focus {
   padding-right: 3rem;
 }
 
-.px-24 {
-  padding-left: 6rem;
-  padding-right: 6rem;
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .py-0 {
@@ -1145,12 +1144,41 @@ input:focus,  textarea:focus {
   padding-right: 1.25rem;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .pb-0 {
   padding-bottom: 0px;
 }
 
 .pt-40 {
   padding-top: 10rem;
+}
+
+.pr-6 {
+  padding-right: 1.5rem;
+}
+
+.pl-12 {
+  padding-left: 3rem;
+}
+
+.pr-24 {
+  padding-right: 6rem;
+}
+
+.pl-6 {
+  padding-left: 1.5rem;
+}
+
+.pr-32 {
+  padding-right: 8rem;
+}
+
+.pb-24 {
+  padding-bottom: 6rem;
 }
 
 .text-left {
@@ -1161,12 +1189,20 @@ input:focus,  textarea:focus {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .text-justify {
   text-align: justify;
 }
 
 .font-source {
   font-family: Source, serif;
+}
+
+.font-momcake {
+  font-family: Momcake, serif;
 }
 
 .font-raleway {
@@ -1188,6 +1224,11 @@ input:focus,  textarea:focus {
   line-height: 1.75rem;
 }
 
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -1199,6 +1240,10 @@ input:focus,  textarea:focus {
 
 .font-bold {
   font-weight: 700;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
 }
 
 .text-red-500 {
@@ -1298,12 +1343,6 @@ input:focus,  textarea:focus {
   transition-duration: 150ms;
 }
 
-.transition-transform {
-  transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1364,6 +1403,18 @@ input:focus,  textarea:focus {
   src: url("/SourceSansPro-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Momcake";
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  font-display: swap;
+
+  src: url("/Momcake-Bold.otf") format("opentype");
+}
+
 .hover\:border-secondary-variant:hover {
   --tw-border-opacity: 1;
   border-color: rgb(228 216 197 / var(--tw-border-opacity));
@@ -1377,14 +1428,6 @@ input:focus,  textarea:focus {
 }
 
 @media (min-width: 768px) {
-  .md\:static {
-    position: static;
-  }
-
-  .md\:absolute {
-    position: absolute;
-  }
-
   .md\:top-32 {
     top: 8rem;
   }
@@ -1393,60 +1436,72 @@ input:focus,  textarea:focus {
     bottom: 0px;
   }
 
-  .md\:left-24 {
-    left: 6rem;
+  .md\:left-0 {
+    left: 0px;
   }
 
-  .md\:bottom-12 {
-    bottom: 3rem;
+  .md\:right-1\/2 {
+    right: 50%;
   }
 
   .md\:left-1\/2 {
     left: 50%;
   }
 
-  .md\:right-\[24vw\] {
-    right: 24vw;
+  .md\:top-0 {
+    top: 0px;
   }
 
-  .md\:top-12 {
-    top: 3rem;
+  .md\:bottom-1\/2 {
+    bottom: 50%;
+  }
+
+  .md\:top-1\/2 {
+    top: 50%;
   }
 
   .md\:right-24 {
     right: 6rem;
   }
 
-  .md\:top-1\/4 {
-    top: 25%;
+  .md\:bottom-24 {
+    bottom: 6rem;
   }
 
-  .md\:top-6 {
-    top: 1.5rem;
+  .md\:right-\[24vw\] {
+    right: 24vw;
+  }
+
+  .md\:top-auto {
+    top: auto;
+  }
+
+  .md\:bottom-12 {
+    bottom: 3rem;
+  }
+
+  .md\:left-24 {
+    left: 6rem;
+  }
+
+  .md\:top-3\/4 {
+    top: 75%;
   }
 
   .md\:bottom-auto {
     bottom: auto;
   }
 
-  .md\:top-0 {
-    top: 0px;
-  }
-
   .md\:col-span-2 {
     grid-column: span 2 / span 2;
   }
 
-  .md\:block {
-    display: block;
+  .md\:grid {
+    display: grid;
   }
 
-  .md\:w-1\/2 {
-    width: 50%;
-  }
-
-  .md\:max-w-xl {
-    max-width: 36rem;
+  .md\:max-h-\[35vh\] {
+    max-height: 35vh;
   }
 
   .md\:max-w-\[20vw\] {
@@ -1457,8 +1512,8 @@ input:focus,  textarea:focus {
     max-width: 14vw;
   }
 
-  .md\:grid-flow-col {
-    grid-auto-flow: column;
+  .md\:max-w-xl {
+    max-width: 36rem;
   }
 
   .md\:grid-cols-2 {
@@ -1469,35 +1524,30 @@ input:focus,  textarea:focus {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .md\:grid-cols-\[36rem\2c 1fr\] {
-    grid-template-columns: 36rem 1fr;
-  }
-
   .md\:content-center {
     align-content: center;
   }
 
-  .md\:gap-16 {
-    gap: 4rem;
+  .md\:p-12 {
+    padding: 3rem;
   }
 
   .md\:p-0 {
     padding: 0px;
   }
 
-  .md\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
+  .md\:p-24 {
+    padding: 6rem;
   }
 
-  .md\:py-12 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+  .md\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
-  .md\:px-24 {
-    padding-left: 6rem;
-    padding-right: 6rem;
+  .md\:py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
   .md\:px-8 {
@@ -1505,20 +1555,154 @@ input:focus,  textarea:focus {
     padding-right: 2rem;
   }
 
-  .md\:pr-24 {
+  .md\:pl-12 {
+    padding-left: 3rem;
+  }
+
+  .md\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:static {
+    position: static;
+  }
+
+  .lg\:absolute {
+    position: absolute;
+  }
+
+  .lg\:top-6 {
+    top: 1.5rem;
+  }
+
+  .lg\:left-1\/2 {
+    left: 50%;
+  }
+
+  .lg\:bottom-auto {
+    bottom: auto;
+  }
+
+  .lg\:top-0 {
+    top: 0px;
+  }
+
+  .lg\:block {
+    display: block;
+  }
+
+  .lg\:grid {
+    display: grid;
+  }
+
+  .lg\:grid-flow-col {
+    grid-auto-flow: column;
+  }
+
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:justify-items-center {
+    justify-items: center;
+  }
+
+  .lg\:gap-16 {
+    gap: 4rem;
+  }
+
+  .lg\:gap-8 {
+    gap: 2rem;
+  }
+
+  .lg\:justify-self-start {
+    justify-self: start;
+  }
+
+  .lg\:p-0 {
+    padding: 0px;
+  }
+
+  .lg\:p-8 {
+    padding: 2rem;
+  }
+
+  .lg\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .lg\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .lg\:py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .lg\:pt-24 {
+    padding-top: 6rem;
+  }
+
+  .lg\:pb-12 {
+    padding-bottom: 3rem;
+  }
+
+  .lg\:pr-12 {
+    padding-right: 3rem;
+  }
+
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .lg\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:right-24 {
+    right: 6rem;
+  }
+
+  .xl\:gap-48 {
+    gap: 12rem;
+  }
+
+  .xl\:px-24 {
+    padding-left: 6rem;
     padding-right: 6rem;
   }
 
-  .md\:pt-36 {
-    padding-top: 9rem;
+  .xl\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
-  .md\:pt-0 {
-    padding-top: 0px;
+  .xl\:pr-24 {
+    padding-right: 6rem;
   }
 
-  .md\:text-lg {
+  .xl\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .xl\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }

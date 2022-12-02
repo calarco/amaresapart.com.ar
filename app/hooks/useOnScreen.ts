@@ -17,6 +17,7 @@ function useOnScreen(ref: RefObject<HTMLDivElement>, threshold: number = 0.3) {
             }
         );
         const currentRef = ref.current;
+        console.log(currentRef)
         if (currentRef) {
             observer.observe(currentRef);
         }

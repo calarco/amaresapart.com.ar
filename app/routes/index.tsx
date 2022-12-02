@@ -1,42 +1,11 @@
 import { useRef } from "react";
 import { ClientOnly } from "remix-utils";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax"
-import { config } from 'react-spring'
+import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import { config } from "react-spring";
 
 import useOnScreen from "~/hooks/useOnScreen";
 import { Gallery } from "~/components/Gallery";
 import logo from "~/img/logo.svg";
-import img01 from "~/img/Sum/01.jpg";
-import img02 from "~/img/Sum/02.jpg";
-import img03 from "~/img/Sum/03.jpg";
-import img04 from "~/img/Sum/04.jpg";
-import img05 from "~/img/Mar/01.jpg";
-import img06 from "~/img/Mar/02.jpg";
-import img07 from "~/img/Mar/03.jpg";
-import img08 from "~/img/Mar/04.jpg";
-import img09 from "~/img/Interior/01.jpg";
-import img10 from "~/img/Interior/02.jpg";
-import img11 from "~/img/Interior/03.jpg";
-import img12 from "~/img/Interior/04.jpg";
-
-const images = [
-    {
-        title: "Apartamentos con vista al mar",
-        list: ["/img/Mar/02.jpg", "/img/Mar/03.jpg", "/img/Mar/04.jpg"],
-    },
-    {
-        title: "Espacios compartidos",
-        list: ["/img/Sum/02.jpg", "/img/Sum/03.jpg", "/img/Sum/04.jpg"],
-    },
-    {
-        title: "Apartamentos internos",
-        list: [
-            "/img/Interior/02.jpg",
-            "/img/Interior/03.jpg",
-            "/img/Interior/04.jpg",
-        ],
-    },
-];
 
 export default function Index() {
     const ref = useRef(null);
@@ -48,178 +17,137 @@ export default function Index() {
             id="main-container"
             className="absolute inset-0 overflow-clip overflow-y-auto"
         >
-            <Parallax pages={4} config={config.stiff}>
+            <Parallax pages={5} config={config.default}>
                 <ParallaxLayer
-                    sticky={{ start: 0, end: 3 }}
-                    style={{
-                        zIndex: -10
-                    }}
+                    sticky={{ start: 0, end: 4 }}
+                    style={{ zIndex: "-1" }}
                 >
                     <div
                         ref={ref}
-                        className={`relative z-0 h-screen w-screen pointer-events-none`}
+                        className="absolute inset-0 pointer-events-none"
                     >
                         <div
-                            className={`fixed z-0 top-0 h-screen w-screen p-12 pb-0 grid justify-items-center content-center gap-24 transition duration-700 -translate-y-4 opacity-0 ${true && "translate-y-0 opacity-100"
-                                }`}
+                            className={`absolute inset-0 px-12 pb-24 md:p-24 grid justify-items-center content-center transition duration-700 -translate-y-4 opacity-0 ${
+                                true && "translate-y-0 opacity-100"
+                            }`}
                         >
-                            <img src={logo} alt="Logo" className="w-full max-w-2xl" />
-                            <p className="max-w-2xl text-lg text-center">
-                                Apartamentos frente al mar y a dos cuadras del centro de
-                                Santa Clara del Mar. Cuentan con calefacción central, WI-FI,
-                                cable, parrillas, SUM y estacionamiento.
-                            </p>
+                            <img
+                                src={logo}
+                                alt="Logo"
+                                className="w-full max-w-2xl"
+                            />
                         </div>
                     </div>
                 </ParallaxLayer>
-
-                <ParallaxLayer
-                    offset={1}
-                    speed={0.0}
-                >
-                    <div className="absolute z-10 top-12 md:top-32 md:bottom-0 left-8 md:left-24 grid gap-28 content-center">
+                <ParallaxLayer speed={-0.2}>
+                    <div className="absolute bottom-1/4 md:bottom-auto md:top-3/4 left-0 right-0 p-8 grid justify-items-center content-center pointer-events-none">
+                        <p className="max-w-2xl lg:text-lg text-center">
+                            Apartamentos frente al mar y a dos cuadras del
+                            centro de Santa Clara del Mar. Cuentan con
+                            calefacción central, WI-FI, cable, parrillas, SUM y
+                            estacionamiento.
+                        </p>
+                    </div>
+                </ParallaxLayer>
+                <ClientOnly>
+                    {() => (
+                        <>
+                            <Gallery
+                                offset={1}
+                                title="Espacios Compartidos"
+                                src1="/img/Sum/02.jpg"
+                                src2="/img/Sum/03.jpg"
+                                src3="/img/Sum/04.jpg"
+                                src4="/img/Sum/01.jpg"
+                            />
+                            <Gallery
+                                offset={2}
+                                title="Apartamentos con vista al mar"
+                                src1="/img/Mar/02.jpg"
+                                src2="/img/Mar/03.jpg"
+                                src3="/img/Mar/04.jpg"
+                                src4="/img/Mar/01.jpg"
+                            />
+                            <Gallery
+                                offset={3}
+                                title="Apartamentos internos"
+                                src1="/img/Interior/03.jpg"
+                                src2="/img/Interior/02.jpg"
+                                src3="/img/Interior/04.jpg"
+                                src4="/img/Interior/01.jpg"
+                            />
+                        </>
+                    )}
+                </ClientOnly>
+                <ParallaxLayer offset={4} speed={0.1} factor={2.5}>
+                    <div className="absolute top-8 md:top-0 left-0 md:left-24 right-1/2 p-4 md:p-0 grid gap-8 content-center">
                         <img
-                            src={img02}
+                            src="/img/Galeria/01.jpg"
                             alt=""
-                            className="w-full max-w-[80vw] md:max-w-xl rounded-md shadow-lg overflow-clip"
+                            className="w-full max-w-xl rounded-lg shadow-lg overflow-clip"
+                        />
+                        <img
+                            src="/img/Galeria/02.jpg"
+                            alt=""
+                            className="w-full max-w-xl rounded-lg shadow-lg overflow-clip"
+                        />
+                        <img
+                            src="/img/Galeria/03.jpg"
+                            alt=""
+                            className="w-full max-w-xl rounded-lg shadow-lg overflow-clip"
+                        />
+                        <img
+                            src="/img/Galeria/04.jpg"
+                            alt=""
+                            className="w-full max-w-xl rounded-lg shadow-lg overflow-clip"
+                        />
+                        <img
+                            src="/img/Galeria/05.jpg"
+                            alt=""
+                            className="w-full max-w-xl rounded-lg shadow-lg overflow-clip"
+                        />
+                        <img
+                            src="/img/Galeria/06.jpg"
+                            alt=""
+                            className="w-full max-w-xl rounded-lg shadow-lg overflow-clip"
                         />
                     </div>
                 </ParallaxLayer>
-                <ParallaxLayer
-                    offset={1}
-                    speed={0.5}
-                >
-                    <div className="absolute z-10 bottom-52 md:bottom-12 left-4 md:left-1/2 grid gap-28 content-center">
+                <ParallaxLayer offset={4} speed={0.3} factor={2.5}>
+                    <div className="absolute top-8 md:top-0 left-1/2 right-0 md:right-24 p-4 md:p-0 grid gap-8 content-center justify-center">
                         <img
-                            src={img03}
+                            src="/img/Galeria/07.jpg"
                             alt=""
-                            className="w-full max-w-[50vw] md:max-w-[20vw] rounded-md shadow-lg overflow-clip"
+                            className="w-full max-w-xl rounded-lg shadow-lg overflow-clip"
                         />
-                    </div>
-                </ParallaxLayer>
-                <ParallaxLayer
-                    offset={1}
-                    speed={0.3}
-                >
-                    <div className="absolute top-80 md:top-32 right-4 md:right-[24vw] grid gap-28 content-center">
                         <img
-                            src={img04}
+                            src="/img/Galeria/08.jpg"
                             alt=""
-                            className="w-full max-w-[50vw] md:max-w-[20vw] rounded-md shadow-lg overflow-clip"
+                            className="w-full max-w-xl rounded-lg shadow-lg overflow-clip"
                         />
-                    </div>
-                </ParallaxLayer>
-                <ParallaxLayer
-                    offset={1}
-                    speed={1.0}
-                >
-                    <div className="absolute md:top-12 bottom-32 md:bottom-0 right-12 md:right-24 grid gap-28 content-center">
                         <img
-                            src={img01}
+                            src="/img/Galeria/09.jpg"
                             alt=""
-                            className="w-full max-w-[25vw] md:max-w-[14vw] rounded-md shadow-lg overflow-clip"
+                            className="w-full max-w-xl rounded-lg shadow-lg overflow-clip"
                         />
-                    </div>
-                </ParallaxLayer>
-
-                <ParallaxLayer
-                    offset={2}
-                    speed={0.0}
-                >
-                    <div className="absolute z-10 top-12 md:top-32 bottom-0 left-8 md:left-24 grid gap-28 content-center">
                         <img
-                            src={img06}
+                            src="/img/Galeria/10.jpg"
                             alt=""
-                            className="w-full max-w-[80vw] md:max-w-xl rounded-md shadow-lg overflow-clip"
+                            className="w-full max-w-xl rounded-lg shadow-lg overflow-clip"
                         />
-                    </div>
-                </ParallaxLayer>
-                <ParallaxLayer
-                    offset={2}
-                    speed={0.6}
-                >
-                    <div className="absolute z-10 bottom-[20vh] md:bottom-12 left-4 md:left-1/2 grid gap-28 content-center">
                         <img
-                            src={img07}
+                            src="/img/Galeria/11.jpg"
                             alt=""
-                            className="w-full max-w-[20vw] rounded-md shadow-lg overflow-clip"
+                            className="w-full max-w-xl rounded-lg shadow-lg overflow-clip"
                         />
-                    </div>
-                </ParallaxLayer>
-                <ParallaxLayer
-                    offset={2}
-                    speed={0.4}
-                >
-                    <div className="absolute top-[35vh] md:top-32 right-4 md:right-[24vw] grid gap-28 content-center">
                         <img
-                            src={img08}
+                            src="/img/Galeria/12.jpg"
                             alt=""
-                            className="w-full max-w-[20vw] rounded-md shadow-lg overflow-clip"
-                        />
-                    </div>
-                </ParallaxLayer>
-                <ParallaxLayer
-                    offset={2}
-                    speed={0.2}
-                >
-                    <div className="absolute top-12 bottom-0 right-12 md:right-24 grid gap-28 content-center">
-                        <img
-                            src={img05}
-                            alt=""
-                            className="w-full max-w-[14vw] rounded-md shadow-lg overflow-clip"
-                        />
-                    </div>
-                </ParallaxLayer>
-
-                <ParallaxLayer
-                    offset={3}
-                    speed={-0.1}
-                >
-                    <div className="absolute z-10 top-32 left-24 grid gap-28 content-center">
-                        <img
-                            src={img10}
-                            alt=""
-                            className="w-full max-w-[26vw] rounded-md shadow-lg overflow-clip"
-                        />
-                    </div>
-                </ParallaxLayer>
-                <ParallaxLayer
-                    offset={3}
-                    speed={0.6}
-                >
-                    <div className="absolute z-10 bottom-32 left-[34vw] grid gap-28 content-center">
-                        <img
-                            src={img11}
-                            alt=""
-                            className="w-full max-w-[20vw] rounded-md shadow-lg overflow-clip"
-                        />
-                    </div>
-                </ParallaxLayer>
-                <ParallaxLayer
-                    offset={3}
-                    speed={0.2}
-                >
-                    <div className="absolute top-32 right-[24vw] grid gap-28 content-center">
-                        <img
-                            src={img12}
-                            alt=""
-                            className="w-full max-w-[20vw] rounded-md shadow-lg overflow-clip"
-                        />
-                    </div>
-                </ParallaxLayer>
-                <ParallaxLayer
-                    offset={3}
-                    speed={0.4}
-                >
-                    <div className="absolute bottom-32 right-24 grid gap-28 content-center">
-                        <img
-                            src={img09}
-                            alt=""
-                            className="w-full max-w-[14vw] rounded-md shadow-lg overflow-clip"
+                            className="w-full max-w-xl rounded-lg shadow-lg overflow-clip"
                         />
                     </div>
                 </ParallaxLayer>
             </Parallax>
-        </section >
+        </section>
     );
 }
