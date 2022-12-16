@@ -20,8 +20,8 @@ export default function Propuesta() {
         <section className="absolute inset-0 overflow-clip overflow-y-auto text-justify grid justify-center">
             <Parallax pages={3} config={config.default}>
                 <ParallaxLayer offset={0} factor={1.1} speed={-0.1}>
-                    <article className="absolute top-44 md:top-32 md:bottom-0 md:left-0 md:right-1/2 px-6 md:px-12 xl:px-24 grid content-center gap-8">
-                        <h2 className="max-w-xl text-right text-4xl text-secondary font-source">
+                    <article className="absolute top-40 md:top-32 md:bottom-0 md:left-0 md:right-1/2 px-6 lg:pl-12 lg:pr-24 xl:pl-24 xl:pr-48 grid content-center justify-center gap-8">
+                        <h2 className="max-w-xl md:text-right text-4xl text-secondary font-source">
                             Santa Clara del Mar
                         </h2>
                         <p className="max-w-xl text-sm md:text-base">
@@ -51,7 +51,7 @@ export default function Propuesta() {
                     </article>
                 </ParallaxLayer>
                 <ParallaxLayer offset={0} factor={1.1} speed={0.2}>
-                    <article className="absolute md:top-32 bottom-0 left-1/2 md:left-1/2 right-0 pt-40 pr-6 lg:pr-12 xl:pr-24 grid gap-20 content-center">
+                    <article className="absolute top-3/4 md:top-32 md:bottom-0 left-1/3 md:left-1/2 right-0 pt-12 md:pt-40 pr-6 lg:pr-12 xl:pr-24 grid gap-20 content-center">
                         <img
                             src={santaclara}
                             alt="santa clara"
@@ -111,7 +111,7 @@ export default function Propuesta() {
                 </ParallaxLayer>
 
                 <ParallaxLayer offset={1} factor={1.1} speed={0.1}>
-                    <div className="absolute top-1/3 md:top-0 md:bottom-1/2 left-1/2 md:left-0 md:right-1/2 pr-6 md:px-12 xl:px-24 grid gap-28 content-end md:content-center">
+                    <div className="absolute top-1/3 md:top-0 md:bottom-1/2 left-1/2 md:left-0 md:right-1/2 pr-6 lg:pl-12 lg:pr-24 xl:pl-24 xl:pr-48 grid gap-28 content-end md:content-center justify-center">
                         <img
                             src={marchiquita}
                             alt="mar chiquita"
@@ -135,7 +135,7 @@ export default function Propuesta() {
                 </ParallaxLayer>
 
                 <ParallaxLayer offset={1} factor={1.1} speed={0.1}>
-                    <div className="absolute bottom-0 md:top-1/2 left-1/2 md:left-0 md:right-1/2 pr-6 md:px-12 xl:px-24 grid gap-28 content-center">
+                    <div className="absolute bottom-0 md:top-1/2 left-1/2 md:left-0 md:right-1/2 pr-6 lg:pl-12 lg:pr-24 xl:pl-24 xl:pr-48 grid gap-28 content-center justify-center">
                         <img
                             src={mardecobo}
                             alt="mar de cobo"
@@ -164,8 +164,8 @@ export default function Propuesta() {
                 </ParallaxLayer>
 
                 <ParallaxLayer offset={2} speed={-0.2}>
-                    <article className="absolute top-32 md:bottom-0 md:left-0 md:right-1/2 px-6 md:px-12 xl:px-24 grid content-center gap-8">
-                        <h2 className="max-w-xl text-right text-4xl text-secondary font-source">
+                    <article className="absolute top-40 md:bottom-0 md:left-0 md:right-1/2 px-6 lg:pl-12 lg:pr-24 xl:pl-24 xl:pr-48 grid content-center justify-center gap-8">
+                        <h2 className="max-w-xl md:text-right text-4xl text-secondary font-source">
                             Mar del Plata
                         </h2>
                         <p className="max-w-xl text-sm md:text-base">
@@ -183,7 +183,7 @@ export default function Propuesta() {
                     </article>
                 </ParallaxLayer>
                 <ParallaxLayer offset={2} speed={0.1}>
-                    <div className="absolute top-1/2 md:top-32 bottom-32 md:bottom-0 md:left-1/2 md:right-24 px-6 md:p-0 grid gap-28 items-center">
+                    <div className="absolute top-1/2 md:top-44 bottom-32 md:bottom-0 md:left-1/2 md:right-0 px-6 md:p-0 lg:pr-12 xl:pr-24 grid gap-28 items-center">
                         <img
                             src={mdp}
                             alt="mar del plata"

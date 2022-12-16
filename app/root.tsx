@@ -1,17 +1,24 @@
 import type { MetaFunction, LinksFunction } from "@remix-run/node";
 import { useCatch, useLocation, useOutlet } from "@remix-run/react";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
+import remixImageStyles from "remix-image/remix-image.css";
 
 import styles from "./tailwind.css";
 import { Frame } from "~/components/Frame";
 
 export const meta: MetaFunction = () => ({
     charset: "utf-8",
-    title: "Amares",
     viewport: "width=device-width,initial-scale=1",
+    title: "Amares",
+    description:
+        "Apartamentos frente al mar y a dos cuadras del centro de Santa Clara del Mar. Cuentan con calefacción central, WI-FI, cable, parrillas, SUM y estacionamiento.",
+    keywords: "hotel, apart, santa, clara, mar",
 });
 
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
+export const links: LinksFunction = () => [
+    { rel: "stylesheet", href: styles },
+    { rel: "stylesheet", href: remixImageStyles },
+];
 
 export function CatchBoundary() {
     const caught = useCatch();
@@ -51,6 +58,7 @@ export default function App() {
 
     return (
         <Frame>
+            <div className="hidden lg:block fixed top-56 bottom-24 left-[calc(50vw-3rem)] xl:left-[calc(50vw-6rem)] border-r border-secondary-variant/10" />
             <SwitchTransition mode="in-out">
                 <CSSTransition
                     key={location.pathname.split("/")[1]}
