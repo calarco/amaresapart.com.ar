@@ -67,10 +67,10 @@ export default function App() {
                         exit: 300,
                     }}
                     classNames={{
-                        enter: "opacity-0 scale-105",
-                        enterActive: "opacity-1 duration-500 ease-out",
+                        enter: "opacity-0",
+                        enterActive: "opacity-1 duration-500",
                         exit: "opacity-1",
-                        exitActive: "opacity-0 blur-xl duration-300 ease-in",
+                        exitActive: "opacity-0 blur-xl scale-105 duration-300",
                     }}
                 >
                     <main className="absolute inset-0 transition">

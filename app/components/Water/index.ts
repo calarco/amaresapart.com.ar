@@ -1,1 +1,1 @@
-export { default as Water } from "./Water.client";
+export { default as Water } from "./Water";

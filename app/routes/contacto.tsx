@@ -84,7 +84,7 @@ export default function Index() {
                     className="h-screen w-auto max-w-none object-right object-cover"
                 />
             </div>
-            <div className="overflow-auto absolute right-0 left-0 lg:left-1/2 top-0 bottom-0 px-6 pt-40 pb-24 md:px-12 lg:p-0 lg:pt-24 lg:pb-12 lg:pr-12 xl:pr-24 grid content-center justify-items-center gap-8 lg:gap-12">
+            <div className="animate-from-top overflow-auto absolute right-0 left-0 lg:left-1/2 top-0 bottom-0 px-6 pt-40 pb-24 md:px-12 lg:p-0 lg:pt-24 lg:pb-12 lg:pr-12 xl:pr-24 grid content-center justify-items-center gap-8 lg:gap-12">
                 <p className="w-full text-center text-sm md:text-base xl:text-lg">
                     Ubicado frente a la primera línea de playa.
                     <br />
@@ -129,13 +129,19 @@ export default function Index() {
                     <div className="md:absolute md:left-1/2 md:right-0 md:-bottom-8 z-30 md:px-8 grid">
                         <button
                             type="submit"
-                            className={`button md:h-16 px-8 md:px-12 bg-secondary rounded-full shadow-lg ring-0 hover:ring ring-primary-variant/70 active:ring-primary text-primary hover:text-primary ${
+                            className={`relative button md:h-16 px-8 md:px-12 hover:bg-secondary-variant hover:shadow-secondary/20 rounded-full shadow-lg ring-0 active:ring ring-primary-variant/70 hover:text-primary ${
                                 (transition.state === "submitting" ||
                                     actionData?.success) &&
-                                "pointer-events-none"
+                                "pointer-events-none duration-300"
+                            } ${
+                                transition.state === "submitting"
+                                    ? "bg-primary text-secondary"
+                                    : actionData?.success
+                                    ? "bg-primary-variant text-primary"
+                                    : "bg-secondary text-primary"
                             }`}
                         >
-                            <SwitchTransition>
+                            <SwitchTransition mode="out-in">
                                 <CSSTransition
                                     key={
                                         transition.state === "submitting"
@@ -146,24 +152,25 @@ export default function Index() {
                                     }
                                     timeout={300}
                                     classNames={{
-                                        enter: "opacity-0 -translate-y-4",
+                                        enter: "opacity-0",
                                         enterActive: "opacity-1",
                                         exit: "opacity-1",
                                         exitActive: "opacity-0",
                                     }}
                                 >
-                                    <span
-                                        className={`transition duration-300 ${
-                                            transition.state === "submitting" &&
-                                            "animate-pulse"
-                                        }`}
-                                    >
-                                        {transition.state === "submitting"
-                                            ? "enviando..."
-                                            : actionData?.success
-                                            ? "consulta enviada"
-                                            : "Enviar"}
-                                    </span>
+                                    {transition.state === "submitting" ? (
+                                        <span className="absolute inset-0 transition duration-300 grid items-center animate-pulse">
+                                            enviando...
+                                        </span>
+                                    ) : actionData?.success ? (
+                                        <span className="absolute inset-0 transition duration-300 grid items-center">
+                                            ¡consulta enviada!
+                                        </span>
+                                    ) : (
+                                        <span className="absolute inset-0 transition duration-300 grid items-center">
+                                            Enviar
+                                        </span>
+                                    )}
                                 </CSSTransition>
                             </SwitchTransition>
                         </button>

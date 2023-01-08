@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import { useRef } from "react";
 import {
     Meta,
     Links,
@@ -9,7 +8,6 @@ import {
     LiveReload,
     useLocation,
 } from "@remix-run/react";
-import { ClientOnly } from "remix-utils";
 import { useSpring, animated } from "react-spring";
 
 import logo from "~/img/logo.svg";
@@ -17,11 +15,10 @@ import whatsapp from "~/img/whatsapp.svg";
 import { Water } from "~/components/Water";
 
 export default function Frame({ children }: { children: ReactNode }) {
-    const ref = useRef(null);
     const location = useLocation();
     const props = useSpring({
         left:
-            location.pathname.split("/")[1] === "propuesta"
+            location.pathname.split("/")[1] === "alrededores"
                 ? "33%"
                 : location.pathname.split("/")[1] === "contacto"
                 ? "67%"
@@ -31,18 +28,15 @@ export default function Frame({ children }: { children: ReactNode }) {
     });
 
     return (
-        <html lang="es" className="overflow-clip">
+        <html lang="es" className="overflow-clip bg-slate-800">
             <head>
                 <Meta />
                 <Links />
             </head>
-            <body
-                ref={ref}
-                className="relative bg-slate-900 bg-fixed h-screen w-screen overflow-clip select-none text-gray-100/80 font-raleway"
-            >
-                <nav className="fixed bottom-0 lg:bottom-auto lg:top-0 left-0 right-0 z-50 p-2 lg:py-8 xl:py-12 lg:px-0 grid items-center grid-cols-1 lg:grid-cols-2">
+            <body className="relative bg-fixed h-screen w-screen overflow-clip select-none text-gray-100/80 font-raleway">
+                <nav className="pointer-events-none fixed bottom-0 lg:bottom-auto lg:top-0 left-0 right-0 z-50 p-2 lg:py-8 xl:py-12 lg:px-0 grid items-center grid-cols-1 lg:grid-cols-2">
                     <div className="w-full lg:pl-12 lg:pr-24 xl:pl-24 xl:pr-48 text-center">
-                        <div className="inline-block relative h-16 w-full max-w-xl rounded-full overflow-clip bg-primary/80 backdrop-blur-lg shadow-lg outline outline-1 outline-primary-variant/20">
+                        <div className="pointer-events-auto inline-block relative h-16 w-full max-w-xl rounded-full overflow-clip bg-primary/80 backdrop-blur-lg shadow-inset outline outline-1 outline-primary-variant/30">
                             <animated.div
                                 style={props}
                                 className="absolute z-1 top-0 bottom-0 w-1/3 rounded-full bg-secondary shadow-lg pointer-events-none"
@@ -51,31 +45,34 @@ export default function Frame({ children }: { children: ReactNode }) {
                                 <NavLink
                                     to="/"
                                     className={({ isActive }) =>
-                                        `button rounded-full active:scale-90 ${
-                                            isActive &&
-                                            "pointer-events-none text-primary"
+                                        `button active:scale-95 shadow-black/40 hover:shadow-secondary-variant/20 ${
+                                            isActive
+                                                ? "pointer-events-none text-primary"
+                                                : "text-shadow-lg hover:text-shadow"
                                         }`
                                     }
                                 >
                                     Galería
                                 </NavLink>
                                 <NavLink
-                                    to="propuesta"
+                                    to="alrededores"
                                     className={({ isActive }) =>
-                                        `button rounded-full active:scale-90 ${
-                                            isActive &&
-                                            "pointer-events-none text-primary"
+                                        `button active:scale-95 shadow-black/40 hover:shadow-secondary-variant/20 ${
+                                            isActive
+                                                ? "pointer-events-none text-primary"
+                                                : "text-shadow-lg hover:text-shadow"
                                         }`
                                     }
                                 >
-                                    Propuesta
+                                    Alrededores
                                 </NavLink>
                                 <NavLink
                                     to="contacto"
                                     className={({ isActive }) =>
-                                        `button rounded-full active:scale-90 ${
-                                            isActive &&
-                                            "pointer-events-none text-primary"
+                                        `button active:scale-95 shadow-black/40 hover:shadow-secondary-variant/20 ${
+                                            isActive
+                                                ? "pointer-events-none text-primary"
+                                                : "text-shadow-lg hover:text-shadow"
                                         }`
                                     }
                                 >
@@ -89,7 +86,7 @@ export default function Frame({ children }: { children: ReactNode }) {
                             href="https://api.whatsapp.com/send?phone=5492233471147"
                             target="_blank"
                             rel="noreferrer"
-                            className="fixed top-8 right-4 md:right-12 lg:static button h-16 py-0 px-5 xl:px-8 rounded-full bg-primary/80 backdrop-blur-lg shadow-lg border-primary-variant/20 hover:border-secondary-variant text-secondary text-lg grid items-center grid-flow-col gap-6"
+                            className="pointer-events-auto fixed top-8 right-4 md:right-12 lg:static button h-16 py-0 px-5 xl:px-8 rounded-full bg-primary/80 backdrop-blur-lg shadow-lg outline outline-1 outline-primary-variant/30 hover:outline-secondary-variant hover:shadow-secondary/20 text-secondary hover:text-secondary text-lg grid items-center grid-flow-col gap-6"
                         >
                             <img
                                 src={whatsapp}
@@ -112,7 +109,10 @@ export default function Frame({ children }: { children: ReactNode }) {
                         }`}
                     />
                 </div>
-                <div className="fixed z-10 bottom-5 -left-4 mix-blend-difference hidden md:block -rotate-90">
+                <div className="fixed z-10 bottom-2 left-0 mix-blend-difference hidden md:block -rotate-90">
+                    <span className="opacity-60 text-sm font-source">2022</span>
+                </div>
+                <div className="fixed z-10 bottom-5 -right-4 mix-blend-difference hidden md:block rotate-90">
                     <a
                         href="https://calarco.com.ar"
                         target="_blank"
@@ -122,10 +122,7 @@ export default function Frame({ children }: { children: ReactNode }) {
                         © calarco
                     </a>
                 </div>
-                <div className="fixed z-10 bottom-2 right-0 mix-blend-difference hidden md:block rotate-90">
-                    <span className="opacity-60 text-sm font-source">2022</span>
-                </div>
-                <ClientOnly>{() => <Water />}</ClientOnly>
+                <Water />
                 {children}
                 <ScrollRestoration />
                 <Scripts />

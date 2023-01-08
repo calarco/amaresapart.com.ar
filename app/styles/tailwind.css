@@ -27,10 +27,10 @@
 
 @layer base {
     select {
-        @apply px-4 py-2 w-full rounded-md bg-transparent bg-slate-100 shadow-inner font-normal appearance-none transition hover:cursor-pointer hover:bg-sky-700/20 focus:bg-orange-400/20 focus:outline-none;
+        @apply px-4 py-2 w-full rounded-md bg-slate-100 shadow-inner font-normal appearance-none transition hover:cursor-pointer hover:bg-sky-700/20 focus:bg-orange-400/20 focus:outline-none;
     }
     input, textarea {
-        @apply px-5 py-3 w-full rounded-md bg-transparent bg-slate-500/10 shadow-inner md:text-lg font-normal appearance-none transition border border-solid border-transparent hover:border-b-secondary focus:border-secondary focus:outline-none;
+        @apply px-5 py-3 w-full rounded-md bg-slate-500/10 shadow-inner md:text-lg font-normal appearance-none transition border border-solid border-transparent hover:border-b-secondary focus:border-secondary focus:outline-none;
     }    
 }
 
